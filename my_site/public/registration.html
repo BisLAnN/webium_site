@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webium</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/registration_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="Онлайн курсы">
+    <meta property="og:image" content="/images/logo.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+
+    <a href="#" onclick="goBack()" class="back-link">&#9664; Назад</a>
+
+    <div class="container">
+
+        <h3>webium</h3>
+        
+        <h1>Регистрация</h1>
+
+        <form>  
+            <div class="input-group">
+                <label for="firstName">Имя:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="input-group">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Повторите пароль:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+            <div class="privacy">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                <label for="privacyPolicy">Я соглашаюсь c <a href="https://storage.yandexcloud.net/webium/policy.pdf">Политикой конфиденциальности</a></label>
+            </div> 
+
+            <button type="button" class="btn" onclick="registerUser()">Зарегистрироваться</button>
+
+        </form>
+
+        <div id="message" class="message"></div>
+
+    </div>
+
+    <script src="scripts/registration_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webium</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/all_courses_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="webium - онлайн образовательные курсы">
+    <meta property="og:image" content="/images/logotype.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img src="images/logotype.svg" alt="Логотип" title="Логотип"></a>
+                <div class="navbar-wrap">
+                    <ul class="navbar-menu">
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="authorization.html">Войти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Каталог курсов</h1>
+
+    <div class="search">
+        <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder=" название курса">
+    </div>
+    
+    <div id="courses" class="content">
+        <div class="courses-header">
+            <a href="#" class="filter-course-link" data-category="all">Все</a>
+            <a href="#" class="filter-course-link" data-category="Программирование">Программирование</a>
+            <a href="#" class="filter-course-link" data-category="Нейросети">Нейросети</a>
+            <a href="#" class="filter-course-link" data-category="Дизайн">Дизайн</a>
+            <a href="#" class="filter-course-link" data-category="Аналитика">Аналитика</a>
+            <a href="#" class="filter-course-link" data-category="Маркетинг">Маркетинг</a>
+            <a href="#" class="filter-course-link" data-category="Психология">Психология</a>
+            <a href="#" class="filter-course-link" data-category="Иностранные языки">Иностранные языки</a>
+            <br><br><div id="noCoursesMessage" style="display: none;">ничего не найдено</div>
+            <div id="coursesCount" class="courses-count"></div>
+        </div>
+        <div id="courseList" class="course-list">
+            <div id="loadingMessage">Загрузка...</div>
+        </div>
+    </div>
+
+    <div id="noCoursesMessage" style="display: none;">ничего не найдено</div>
+
+    <main>
+        <div class="course-list" id="courseList">
+
+            <div id="loadingMessage">Загрузка курсов...</div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="tel:+79286687943">+7 (928) 668 79 43</a>
+        <a href="mailto:webium@yandex.ru">webium@yandex.ru</a>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="scripts/all_courses.js"></script>
+</body>
+
+</html>

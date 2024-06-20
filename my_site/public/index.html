@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Хуаде Бислан">
+    <meta name="keywords" content="онлайн-обучение, курсы по различным направлениям, webium, Хуаде Бислан, курсы, онлайн-курсы">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webium</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="webium - онлайн образовательные курсы">
+    <meta property="og:image" content="/images/logotype.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img src="images/logotype.svg" alt="Логотип" title="Логотип"></a>
+                <div class="navbar-wrap">
+                    <button class="hamburger" aria-label="Toggle navigation">
+                        <span class="hamburger-icon"></span>
+                    </button>
+                    <ul class="navbar-menu">
+                        <li><a href="all_courses.html">Образовательные курсы</a></li>
+                        <li><a href="personal_account.html" id="my-education">Мой аккаунт</a></li>
+                        <li><a href="authorization.html">Войти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h1>webium <span id="webium-tire">&ndash; все курсы здесь</span></h1>
+    </section>
+
+    <section>
+        <div class="about">
+            <div class="about-container" id="about">
+                <div class="about-item">
+                    <p id="title">Вот почему выбирают образовательную платформу<span id="logo"><br>webium</span></p>
+                </div>
+
+                <div class="transfer">
+                    <div class="transfer-item">
+                        <p>Качественный контент</p>
+                        <span>мы предлагаем разнообразные курсы по различным темем, что соответсвует потребностям
+                            широкого круга пользователей</span>
+                    </div>
+
+                    <div class="transfer-item">
+                        <p>Гибкость в обучении</p>
+                        <span>возможность доступа к курсам в любое удобное время и место</span>
+                    </div>
+
+                    <div class="transfer-item">
+                        <p>Интерактивные материалы</p>
+                        <span>мы предоставляем полезные ресурсы в нашем канале, которая может помочь и облегчить
+                            процесс обучения</span>
+                    </div>
+
+                    <div class="transfer-item">
+                        <p>Удобство использования</p>
+                        <span>сайт обладает интуитивно понятным интерфейсом, что делает навигацию по платформе
+                            простой и понятной</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Что такое онлайн-курсы?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Онлайн-курсы — это форма обучения через интернет, где вы можете изучать различные темы,
+                        получать знания и навыки, не покидая дома. Наши курсы предоставляют удобные видеоуроки,
+                        материалы и задания для самостоятельного изучения.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Какова стоимость онлайн-обучения?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Наша платформа предоставляет разнообразные курсы с различными ценами. Некоторые курсы
+                        доступны бесплатно, а для других требуется оплата. Вы можете ознакомиться с ценами на
+                        странице каждого курса.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Как долго будет доступен курс?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>После оплаты вы получаете доступ к курсу на неограниченный срок. Это означает, что вы можете
+                        изучать материалы в удобное для вас время и возвращаться к ним в любое время.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="button-container" id="telegram">
+        <span>
+            Подпишись на наш канал в Telegram
+        </span>
+
+        <div class="subscribe-button">
+            <a href="#" class="my-button" onclick="confirmSubscription()">Подписаться</a>
+        </div>
+    </div>
+
+    <dialog id="modal">
+        <p>Вы уверены, что хотите выйти?</p><br>
+        <menu>
+            <button id="confirm-logout">Выход</button>
+            <button id="cancel-logout">Отмена</button>
+        </menu>
+    </dialog>
+
+    <footer>
+        <a href="tel:+79286687943">+7 (928) 668 79 43</a>
+        <a href="mailto:webium@yandex.ru">webium@yandex.ru</a>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

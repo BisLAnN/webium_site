@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webium</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/course_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="webium - онлайн образовательные курсы">
+    <meta property="og:image" content="/images/logotype.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img src="images/logotype.svg" alt="Логотип"
+                        title="Логотип"></a>
+                <div class="navbar-wrap">
+                    <ul class="navbar-menu">
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="all_courses.html">Образовательные курсы</a></li>
+                        <li><a href="authorization.html">Войти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <a href="#" onclick="goBack()" class="back-link">◀ Назад</a>
+
+    <div class="course-image" style="background-color:#fff; width: 1500px; height: 200px;">
+        <h1 id="courseName"></h1>
+    </div>
+    
+
+    <div class="about">
+        <div class="about_">
+            <div class="about-course">
+                <p id="description"></p>
+                <div id="sections"></div>
+                <div id="lessons"></div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="subscribeBtn">Подписаться на курс</button>
+
+    <footer>
+        <a href="tel:+79286687943">+7 (928) 668 79 43</a>
+        <a href="mailto:webium@yandex.ru">webium@yandex.ru</a>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+
+    <script src="scripts/course_script.js"></script>
+</body>
+
+</html>

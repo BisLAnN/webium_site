@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Констуктор образовательного курса</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/course_creating_style.css">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="webium - онлайн образовательные курсы">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <a href="#" onclick="goBack()" class="back-link">&#9664; Назад</a>
+
+    <form action="/uploads" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="course_category">категория:</label>
+            <input type="text" id="category" name="category" list="categories"/>
+            <datalist id="categories">
+                <option value="Программирование"></option>
+                <option value="Нейросети"></option>
+                <option value="Дизайн"></option>
+                <option value="Аналитика"></option>
+                <option value="Маркетинг"></option>
+                <option value="Псиохология"></option>
+                <option value="Иностранные языки"></option>
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="course_name">название курса:</label>
+            <input type="text" id="course_name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="course_description">описание курса:</label>
+            <textarea type="text" id="course_description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label>название раздела:</label>
+            <input type="text" name="section_name" id="section_name">
+        </div>
+        <div class="form-group">
+            <label>название урока:</label>
+            <input type="text" name="lesson_name" id="lesson_name">
+        </div>
+        <div class="form-group">
+            <label>описание урока:</label>
+            <textarea type="text" name="lesson_description" id="lesson_description"></textarea>
+        </div>
+        <div class="form-group">
+            <label>выбери файл урока:</label>
+            <input type="file" name="file_input" id="fileInput">
+        </div>
+
+        <div id="sections">
+
+        </div>
+
+        <button type="button" id="add_section">добавить раздел</button>
+        <button type="submit" id="publish_button">опубликовать</button>
+    </form>
+    
+
+    <script src="scripts/course_creating_script.js"></script>
+</body>
+
+</html>

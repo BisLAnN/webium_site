@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #000;
+    min-width: 320px;
+    overflow-x: hidden;
+    height: auto;
+    margin: auto;
+    max-width: 1500px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 10px 0;
+}
+
+.sidebar-menu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar-menu li a:hover {
+    color: #000;
+    opacity: 1;
+    text-decoration: none;
+    transition: all .14s ease-in-out;
+}
+
+main {
+    margin-left: 220px;
+}
+
+.logo img {
+    text-align: center;
+    margin-bottom: 120px;
+    margin-left: 30px;
+    width: 90px;
+    height: auto;
+}
+
+.logout a {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    left: 50px;
+    width: auto;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    opacity: 0.7;
+    border: transparent solid 1px;
+}
+
+.logout a:hover {
+    color: #fff;
+    background-color: #ff3a3a;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    border: #ff3a3a solid 1px;
+    font-size: 16px;
+    opacity: 1;
+    transition: all .14s ease-in-out;
+}
+
+.content {
+    display: none;
+}
+
+.course-list {
+    margin: 0px 0px 400px 100px;
+    display: flex;
+}
+
+.course-list p {
+    margin-left: 15px;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin-left: 120px;
+}
+
+.course-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.course-item button {
+    margin-top: 5px;
+    margin-left: 85px;
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+    padding: 5px 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.courses-header {
+    display: block;
+}
+
+.course-item button:hover {
+    margin-top: 5px;
+    margin-left: 85px;
+    background: #000;
+    color: #fff;
+    border-radius: 12px;
+    padding: 5px 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .14s ease-in-out;
+}
+
+.course-item {
+    background-color: #fff;
+    min-width: 340px;
+    height: 200px;
+    border-radius: 12px;
+    margin-left: 20px;
+    border: 1px solid #000;
+}
+
+.course-item a {
+    color: #000;
+    border: #000 solid 1px;
+    border-radius: 999px;
+    padding: 10px 20px;
+    margin-left: 65px;
+    background-color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.course-item a:hover {
+    color: #fff;
+    border: #000 solid 1px;
+    border-radius: 999px;
+    padding: 10px 20px;
+    margin-left: 65px;
+    background-color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .14s ease-in-out;
+}
+
+#loadingMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.users-header {
+    display: block;
+}
+
+.courses-header #addUser {
+    color: #fff;
+    background-color: #000;
+    margin-left: 30px;
+}
+
+.courses-header .users-list a:hover {
+    transition: all .14s ease-in-out;
+    background-color: #ff3a3a;
+    color: #fff;
+}
+
+.courses-count,
+.users-count {
+    margin-top: 50px;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.user-block {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #000;
+}
+
+.users-list {
+    display: flex;
+    gap: 30px;
+}
+
+.user-item img {
+    width: 220px;
+    height: auto;
+}
+
+.user-block a {
+    color: #ff3a3a;
+}
+
+.courses-header a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 999px;
+    padding: 10px 20px;
+    margin-top: 120px;
+}
+
+.courses-header a:focus, .courses-header a:hover, .filter-user-link a:focus {
+    transition: all .14s ease-in-out;
+    background-color: #000;
+    color: #fff;    
+}
+
+.courses-header {
+    max-width: 1300px;
+    margin-left: 120px;
+}
+
+.courses-header input {
+    width: 440px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    font-size: 18px;
+    min-width: 350px;
+    margin: 20px 0px 10px 300px;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+    border: none;
+    border: 1px solid #000;
+    border-radius: 999px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+#delete-user {
+    margin: 20px 0px 10px 60px;
+}
+
+#delete-button {
+    margin: 20px 0px 10px 75px;
+}
+
+#addUserButton, #delete-button, #confirm-logout{
+    background-color: #fff;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 999px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+menu {
+    margin-left: 65px;
+}
+
+#delete-reason {
+    font-size: 16px;
+}
+
+input {
+    min-width: 250px;
+}
+
+#deleteDialog input {
+    width: 500px;
+}
+
+#deleteDialog h1 {
+    margin-left: 140px;
+}
+
+menu a, #cancel-button, #cancel-logout {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 999px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.courses-header a{
+    color: #000;
+    text-decoration: none;
+    border-radius: 999px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+}
+
+#addUserDialog {
+    gap: 3px;
+}

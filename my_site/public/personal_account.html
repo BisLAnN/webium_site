@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Хуаде Бислан">
+    <meta name="keywords"
+        content="онлайн-обучение, курсы по различным направлениям, webium, Хуаде Бислан, курсы, онлайн-курсы">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webium</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/personal_account_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="webium - онлайн образовательные курсы">
+    <meta property="og:image" content="/images/logotype.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img src="images/logotype.svg" alt="Логотип" title="Логотип"></a>
+                <div class="navbar-wrap">
+                    <button class="hamburger" aria-label="Toggle navigation">
+                        <span class="hamburger-icon"></span>
+                    </button>
+                    <ul class="navbar-menu">
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="all_courses.html">Образовательные курсы</a></li>
+                        <li><a href="authorization.html" id="logout-button">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Мое обучение</h1>
+    <div id="courseList" class="course-list">
+        <div id="loadingMessage">Загрузка...</div>
+    </div>  
+
+    <dialog id="modal">
+        <p>Вы уверены, что хотите выйти?</p><br>
+        <menu>
+            <button id="confirm-logout">Выход</button>
+            <button id="cancel-logout">Отмена</button>
+        </menu>
+    </dialog>
+
+    <footer>
+        <a href="tel:+79286687943">+7 (928) 668 79 43</a>
+        <a href="mailto:webium@yandex.ru">webium@yandex.ru</a>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+    <script src="scripts/personal_account_script.js"></script>
+</body>
+
+</html>

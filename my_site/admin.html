@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webium</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/admin_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="webium">
+    <meta property="og:description" content="webium - онлайн образовательные курсы">
+    <meta property="og:image" content="/images/logotype.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="images/logotype.svg" alt="Логотип" title="Логотип">
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" onclick="showContent('courses')">Курсы</a></li>
+            <li><a href="#" onclick="showContent('users')">Пользователи</a></li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logout-button">Выйти</a>
+        </div>
+    </aside>
+
+    <main>
+        <div id="courses" class="content">
+            <div class="courses-header">
+                <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder=" название курса"><br>
+                <a href="#" class="filter-course-link" data-category="all">Все</a>
+                <a href="#" class="filter-course-link" data-category="Программирование">Программирование</a>
+                <a href="#" class="filter-course-link" data-category="Нейросети">Нейросети</a>
+                <a href="#" class="filter-course-link" data-category="Дизайн">Дизайн</a>
+                <a href="#" class="filter-course-link" data-category="Аналитика">Аналитика</a>
+                <a href="#" class="filter-course-link" data-category="Маркетинг">Маркетинг</a>
+                <a href="#" class="filter-course-link" data-category="Психология">Психология</a>
+                <a href="#" class="filter-course-link" data-category="Иностранные языки">Иностранные языки</a>
+                <div id="noCoursesMessage" style="display: none;">ничего не найдено</div><br>
+                <div id="coursesCount" class="courses-count"></div>
+                <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+            </div>
+            <div id="courseList" class="course-list">
+                <div id="loadingMessage">Загрузка...</div>
+            </div>
+        </div>
+
+        <div id="users" class="content">
+            <div class="courses-header">
+                <input type="text" id="searchUserInput" placeholder=" логин пользователя">
+                <a href="#" class="addUser" id="addUser">+</a><br>
+                <a href="#" class="filter-user-link" data-role="all">Все</a>
+                <a href="#" class="filter-user-link" data-role="Разработчик">Разработчики</a>
+                <a href="#" class="filter-user-link" data-role="Администратор">Администраторы</a>
+                <div id="usersCount" class="users-count"></div>
+                <div id="noUsersMessage" style="display: none;">ничего не найдено</div>            
+                <div id="usersList" class="users-list">
+                    <div id="loadingMessage">Загрузка...</div>
+                </div>
+                <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+            </div>
+        </div>
+    </main>
+
+    <dialog id="addUserDialog">
+        <form method="dialog">
+            <h2>Добавление нового пользователя</h2><br>
+            <label for="username">Логин:&nbsp;&nbsp;</label>
+            <input type="text" id="username" name="login" required><br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="role">Роль:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="role" name="role" list="roles" />
+            <datalist id="roles">
+                <option value="Разработчик"></option>
+                <option value="Администратор"></option>
+            </datalist><br><br>
+            <menu>
+                <button type="submit" id="addUserButton">Добавить</button>
+                <a href="#" id="cancelButton">Отменить</a>
+            </menu>
+        </form>
+    </dialog>
+
+    <dialog id="deleteDialog">
+        <form method="dialog">
+            <h1>Удаление пользователя</h1><br>
+            <p id="delete-user"></p>
+            <label for="delete-reason">Причина удаления:</label>
+            <select id="delete-reason">
+                <option value="Смена работы">Смена работы</option>
+                <option value="Злоупотребление">Злоупотребление</option>
+                <option value="Другое">Другое</option>
+            </select><br>
+            <label for="delete-confirm">Введите слово "УДАЛИТЬ" для подтверждения:</label><br>
+            <input type="text" id="delete-confirm"><br>
+            <menu>
+                <a href="#" id="delete-button">Удалить</a>
+                <a href="#" type="reset" id="delete-cancel">Отмена</a>
+            </menu>
+        </form>
+    </dialog>
+
+    <dialog id="modal">
+        <p>Вы уверены, что хотите выйти?</p><br>
+        <menu>
+            <button id="confirm-logout">Выход</button>
+            <button id="cancel-logout">Отмена</button>
+        </menu>
+    </dialog>
+    
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Вверх">&#8679;</button>
+    <script src="scripts/admin_script.js"></script>
+
+</body>
+
+</html>

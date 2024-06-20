@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate:ital@1&family=Montserrat:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    color: #000;
+    overflow-x: hidden;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.4;
+    background-color: #fff;
+}
+
+form {
+    padding: 20px;
+    border-radius: 12px;
+    border: #000 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group input {
+    border-radius: 999px;
+    border: #000 1px solid;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#fileInput {
+    border: 0px;
+    border-radius: 0px;
+    max-width: 200px;
+}
+
+.form-group label {
+    flex-basis: 150px;
+}
+
+.form-group a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: #000 solid 1px;
+    transition: 0.3s ease;
+}
+
+.form-group a:hover {
+    color: #fff;
+    background: #000;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+#add_section {
+    margin-top: 30px;
+}
+
+.add_lesson,
+#add_section {
+    background-color: #fff;
+    color: #000;
+    border-radius: 999px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.navbar-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 90px;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu li a {
+    display: inline-block;
+    color: #000;
+    opacity: 0.7;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar-menu li a:hover {
+    color: #000;
+    opacity: 1;
+    transition: all 0.14s ease-in-out;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+    top: -10px;
+}
+
+.hamburger-icon::after {
+    top: 10px;
+}
+
+@media (max-width: 600px) {
+    .navbar-wrap {
+        flex-direction: column;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-menu li a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
